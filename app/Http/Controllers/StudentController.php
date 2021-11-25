@@ -102,8 +102,10 @@ class StudentController extends Controller
         $surname  = $request->surname;
         $address  = $request->address;
 
+        $id_1 = $request->id;
 
        $update = DB::update("update students set name = ?,surname=?,address=? where id = ?",[$name,$surname,$address,$id]);
+
 
 
        return view('index');
